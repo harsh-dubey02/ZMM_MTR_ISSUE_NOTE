@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defintion for mtr issue note'
+define service ZSD_MTR_ISSUE_NOTE {
+  expose ZC_MTR_ISSUE_NOTE;
+}

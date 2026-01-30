@@ -1,0 +1,9 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_MTR_ISSUE_NOTE //alias <alias_name>
+{
+  use update;
+
+  use action ZPRINT;
+}

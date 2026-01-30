@@ -1,0 +1,22 @@
+managed implementation in class zbp_i_mtr_issue_note unique;
+strict ( 2 );
+
+define behavior for ZI_MTR_ISSUE_NOTE alias ZI_MTR_ISSUE_NOTE_DOC
+with unmanaged save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  action ( features : instance ) ZPRINT result [1] $self;
+  update;
+  field ( readonly ) MaterialDocument;
+
+  mapping for ztb_mtr_issue
+    {
+    MaterialDocument = MaterialDocument;
+      base64        = base64;
+    }
+
+
+
+}

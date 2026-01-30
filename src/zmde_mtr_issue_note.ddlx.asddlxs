@@ -1,0 +1,22 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{
+    typeName: 'Material Issue Note',
+    typeNamePlural: 'Material Issue Note',
+    title:{ type: #STANDARD, value: 'MaterialDocument' } }
+
+annotate entity ZC_MTR_ISSUE_NOTE
+    with 
+{
+
+ @UI.facet: [{ id : 'MaterialDocument',
+  purpose: #STANDARD,
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'Material Issue Note',
+   position: 10 }]
+   
+    @UI.lineItem:       [{ position: 10, label: 'MaterialDocument' },{ type: #FOR_ACTION , dataAction: 'ZPRINT', label: 'Generate Print'}]
+  @UI.identification: [{ position: 10, label: 'MaterialDocument' }]
+  @UI.selectionField: [{ position: 10 }]
+   MaterialDocument;
+   }
+ 
